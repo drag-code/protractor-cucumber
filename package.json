@@ -7,7 +7,7 @@
         "pretest": "tsc",
         "test": "protractor JSFiles/conf/conf.js",
         "regressionTest": "tsc && protractor JSFiles/conf/conf.js --suite regression",
-        "cucumbertest": "protractor JSFiles/conf/cucumber.js",
+        "cucumbertest": "npm run webdriver-update && tsc && protractor JSFiles/conf/cucumber.js",
         "protractor": "./node_modules/protractor/built/cli.js",
         "webdriver-update": "./node_modules/.bin/webdriver-manager update",
         "start": "npm run webdriver-update && npm run test"
