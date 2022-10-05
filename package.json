@@ -1,0 +1,39 @@
+{
+    "name": "protractortscucumber",
+    "version": "1.0.0",
+    "description": "Protractor project with cucumber and TS integration",
+    "main": "index.js",
+    "scripts": {
+        "pretest": "tsc",
+        "test": "protractor JSFiles/conf/conf.js",
+        "regressionTest": "tsc && protractor JSFiles/conf/conf.js --suite regression",
+        "cucumbertest": "protractor JSFiles/conf/cucumber.js",
+        "protractor": "./node_modules/protractor/built/cli.js",
+        "webdriver-update": "./node_modules/.bin/webdriver-manager update",
+        "start": "npm run webdriver-update && npm run test"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@cucumber/cucumber": "^7.3.2",
+        "@cucumber/cucumber-expressions": "^16.0.0",
+        "@cucumber/gherkin": "^24.0.0",
+        "@types/jasmine": "4.3.0",
+        "@types/jasminewd2": "2.0.10",
+        "@types/node": "16.11.63",
+        "chai": "4.3.6",
+        "chai-as-promised": "7.1.1",
+        "cucumber": "^6.0.7",
+        "cucumber-html-reporter": "5.5.0",
+        "jasmine": "4.4.0",
+        "jasmine-data-provider": "2.2.0",
+        "protractor": "^7.0.0",
+        "protractor-cucumber-framework": "8.4.4",
+        "protractor-jasmine2-html-reporter": "0.0.7",
+        "ts-node": "^3.0.2",
+        "typescript": "4.8.4"
+    },
+    "devDependencies": {
+        "@types/cucumber": "^7.0.0"
+    }
+}
