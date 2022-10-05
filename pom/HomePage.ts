@@ -24,7 +24,7 @@ class HomePage extends Page {
         this.employmentStatusRadioButton = element(by.id("inlineRadio2"));
         this.dateOfBirthDateInput = element(by.name("bday"));
         this.submitButton = element(by.buttonText("Submit"));
-        this.formBody = element(by.tagName('form-comp'));
+        this.formBody = element(by.tagName('body'));
     }
 
 
@@ -76,6 +76,8 @@ class HomePage extends Page {
         await this.nameInput.sendKeys("");
         await this.emailInput.sendKeys("");
         await this.formBody.click();
+        console.log("name");
+
     }
 }
 
